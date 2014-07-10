@@ -1,1 +1,16 @@
-Test Create New File
+bool canJump(int A[], int n) {
+   int canJumpPosition = n - 1;
+   int curPosition = n - 1;
+   while (curPosition >= 0) {
+      if ((canJumpPosition - curPosition) <= A[curPosition]) {
+         canJumpPosition = curPosition;
+      }
+      curPosition--;
+   }
+   if (canJumpPosition == 0) {
+      return true;
+   }
+   else {
+      return false;
+   }
+}
